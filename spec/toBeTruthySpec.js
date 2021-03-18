@@ -1,0 +1,35 @@
+/*
+toBeTruthy
+
+Realiza uma comparação dizendo se uma variável ou objeto possui um valor válido
+Um valor será considerado válido caso ele possua um valor diferente de false O
+undefined null ou NaN
+Deve ser utilizado quando a verificação abordar valores inválidos distintos
+baseados nas opções citadas acima
+Prefira usar toBeFalsy ao invés de not.toBeTruthy para deixar o código
+mais fácil de compreender
+*/
+
+describe("Teste do toBeTruthy", function() {
+    it("Deve demonstrar o uso do toBeTruthy", function() {
+        var n1 = 10;
+        var n2 = undefined;
+        var n3 = 0;
+        var n4 = '';
+        var n5 = null;
+        var n6 = NaN;
+        var n7;
+
+        expect(n1).toBeTruthy();
+        expect("teste").toBeTruthy;
+        expect(true).toBeTruthy;
+
+        expect(n2).not.toBeTruthy();
+        expect(n3).not.toBeTruthy();
+        expect(n4).not.toBeTruthy();
+        expect(n5).not.toBeTruthy();
+        expect(n6).not.toBeTruthy();
+        expect(n7).not.toBeTruthy();
+        expect(false).not.toBeTruthy;
+    });
+});
